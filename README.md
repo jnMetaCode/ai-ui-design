@@ -102,6 +102,8 @@
 
 ## 相关项目
 
+- [awesome-claude-md](https://github.com/jnMetaCode/awesome-claude-md) — CLAUDE.md 最佳实践集合
+- [ai-coding-101](https://github.com/jnMetaCode/ai-coding-101) — AI 编程从入门到精通
 - [agency-agents-zh](https://github.com/jnMetaCode/agency-agents-zh) — 180 个 AI 智能体专家团队
 - [superpowers-zh](https://github.com/jnMetaCode/superpowers-zh) — AI 编程超能力中文版
 
