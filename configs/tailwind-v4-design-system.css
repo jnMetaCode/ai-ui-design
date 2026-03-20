@@ -1,0 +1,114 @@
+/* Tailwind CSS v4 设计系统配置 */
+/* 适用于 Tailwind CSS v4.x — 使用 CSS-first 配置方式 */
+/* 等效于 tailwind-design-system.js (v3)，迁移到 v4 的 @theme 语法 */
+
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+/* 按需启用：*/
+/* @plugin "@tailwindcss/typography"; */
+/* @plugin "@tailwindcss/container-queries"; */
+
+/*
+ * v4 说明：
+ * - 无需 content 配置，v4 自动检测模板文件
+ * - 暗色模式默认基于 prefers-color-scheme；如需 class 策略，请参考 v4 文档
+ * - 所有自定义 token 在 @theme 块内用 CSS 变量定义
+ */
+
+@theme {
+  /* === 品牌色 (Brand Colors) === */
+  --color-brand-50:  #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-200: #bfdbfe;
+  --color-brand-300: #93c5fd;
+  --color-brand-400: #60a5fa;
+  --color-brand-500: #3b82f6;
+  --color-brand-600: #2563eb;  /* 主操作色 */
+  --color-brand-700: #1d4ed8;
+  --color-brand-800: #1e40af;
+  --color-brand-900: #1e3a8a;
+  --color-brand-950: #172554;
+
+  /* === 字体 (Typography) === */
+  --font-sans: "Inter", system-ui, -apple-system, "PingFang SC",
+               "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", Menlo, monospace;
+
+  /* === 字号 (Modular Scale 1.25) === */
+  --text-xs:   0.75rem;
+  --text-xs--line-height:   1rem;
+  --text-sm:   0.875rem;
+  --text-sm--line-height:   1.25rem;
+  --text-base: 1rem;
+  --text-base--line-height: 1.625rem;
+  --text-lg:   1.25rem;
+  --text-lg--line-height:   1.75rem;
+  --text-xl:   1.563rem;
+  --text-xl--line-height:   2rem;
+  --text-2xl:  1.953rem;
+  --text-2xl--line-height:  2.25rem;
+  --text-3xl:  2.441rem;
+  --text-3xl--line-height:  2.75rem;
+  --text-4xl:  3.052rem;
+  --text-4xl--line-height:  3.25rem;
+
+  /* === 间距 (extends 4px grid) === */
+  --spacing-4_5: 1.125rem;  /* 18px */
+  --spacing-13:  3.25rem;   /* 52px */
+  --spacing-15:  3.75rem;   /* 60px */
+  --spacing-18:  4.5rem;    /* 72px */
+  --spacing-22:  5.5rem;    /* 88px */
+
+  /* === 圆角 (Border Radius) === */
+  --radius-4xl: 2rem;
+  --radius-5xl: 2.5rem;
+
+  /* === 阴影 (Box Shadows) === */
+  --shadow-sm:       0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md:       0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  --shadow-lg:       0 10px 15px -3px rgb(0 0 0 / 0.07), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+  --shadow-xl:       0 20px 25px -5px rgb(0 0 0 / 0.07), 0 8px 10px -6px rgb(0 0 0 / 0.04);
+  --shadow-card:     0 1px 3px 0 rgb(0 0 0 / 0.04), 0 1px 2px -1px rgb(0 0 0 / 0.03);
+  --shadow-dropdown: 0 4px 12px 0 rgb(0 0 0 / 0.08);
+  --shadow-modal:    0 25px 50px -12px rgb(0 0 0 / 0.15);
+
+  /* === 最大宽度 === */
+  --container-8xl:   88rem;    /* 1408px */
+  --container-prose:  65ch;
+
+  /* === 过渡时长 === */
+  --transition-duration-0:   0ms;
+  --transition-duration-150: 150ms;
+  --transition-duration-200: 200ms;
+  --transition-duration-300: 300ms;
+
+  /* === Z-Index === */
+  --z-dropdown: 1000;
+  --z-sticky:   1020;
+  --z-fixed:    1030;
+  --z-overlay:  1040;
+  --z-modal:    1050;
+  --z-popover:  1060;
+  --z-tooltip:  1070;
+  --z-toast:    1080;
+
+  /* === 动画 (Animations) === */
+  --animate-fade-in:        fade-in 0.2s ease-out;
+  --animate-slide-in-right: slide-in-right 0.3s ease-out;
+  --animate-scale-in:       scale-in 0.15s ease-out;
+
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slide-in-right {
+    from { transform: translateX(100%); }
+    to   { transform: translateX(0); }
+  }
+
+  @keyframes scale-in {
+    from { opacity: 0; transform: scale(0.95); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+}

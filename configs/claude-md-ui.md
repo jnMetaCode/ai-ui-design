@@ -6,7 +6,9 @@
 ## UI 与设计系统
 
 ### Tailwind CSS
-- 使用 Tailwind CSS v3.x，启用 @tailwindcss/forms 插件
+- 使用 Tailwind CSS（v3.x 或 v4.x），启用 @tailwindcss/forms 插件
+- v3 使用 `tailwind-design-system.js` 配置；v4 使用 `tailwind-v4-design-system.css`（CSS-first，无需 JS 配置文件）
+- v4 主要变化：`@theme` 替代 `tailwind.config.js`、`@plugin` 替代 `require()`、内容检测自动化
 - 间距遵循 4px 网格（p-1 = 4px, p-2 = 8px, ...）
 - 颜色使用语义化 token：brand-600 为主操作色，gray-900 为正文，gray-500 为辅助文字
 - 圆角统一：按钮 rounded-lg，卡片 rounded-xl，弹窗 rounded-xl

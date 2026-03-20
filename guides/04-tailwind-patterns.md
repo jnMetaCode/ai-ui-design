@@ -166,6 +166,21 @@ module.exports = {
 }
 ```
 
+## Tailwind v3 到 v4 迁移要点
+
+如果你的项目从 Tailwind v3 升级到 v4，注意以下关键变化：
+
+| v3 | v4 | 说明 |
+|----|-----|------|
+| `tailwind.config.js` | `@theme { }` (CSS 文件) | 配置全部迁移到 CSS，无需 JS 配置文件 |
+| `require('@tailwindcss/forms')` | `@plugin "@tailwindcss/forms"` | 插件使用 CSS `@plugin` 指令 |
+| `content: [...]` | 自动检测 | v4 自动扫描模板文件，无需手动配置 content |
+| `darkMode: 'class'` | 默认 `prefers-color-scheme` | 如需 class 策略需额外配置 |
+| `theme.extend.colors.brand` | `--color-brand-*` CSS 变量 | 所有 token 用 CSS 自定义属性定义 |
+| `@apply` | 仍可用但不推荐 | v4 继续支持，但官方建议减少使用 |
+
+> 本项目同时提供 v3 配置 (`tailwind-design-system.js`) 和 v4 配置 (`tailwind-v4-design-system.css`)，选择与你的 Tailwind 版本匹配的文件即可。
+
 ## 反模式
 
 ### 不要这样做
