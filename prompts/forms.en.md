@@ -50,7 +50,7 @@ Create a user registration form:
             class="block w-full rounded-lg border-gray-300 pr-10 shadow-sm
             focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
             placeholder="At least 8 characters" />
-          <button type="button" class="absolute inset-y-0 right-0 flex items-center pr-3
+          <button type="button" aria-label="Toggle password visibility" class="absolute inset-y-0 right-0 flex items-center pr-3
             text-gray-400 hover:text-gray-600">
             <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

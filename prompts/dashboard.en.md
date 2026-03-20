@@ -59,7 +59,7 @@ Below stat cards, create a charts area:
   <div class="rounded-xl bg-white p-5 shadow-sm ring-1 ring-gray-200 lg:col-span-2">
     <div class="flex items-center justify-between">
       <h3 class="text-sm font-semibold text-gray-900">User Growth Trend</h3>
-      <select class="rounded-md border-gray-300 text-sm">
+      <select class="rounded-md border-gray-300 text-sm" aria-label="Select time range">
         <option>Last 7 days</option>
         <option>Last 30 days</option>
         <option>Last 90 days</option>
@@ -99,11 +99,11 @@ Create a data table area:
   <!-- Toolbar -->
   <div class="flex flex-col gap-3 border-b border-gray-200 p-4 sm:flex-row sm:items-center sm:justify-between">
     <div class="relative">
-      <input type="search" placeholder="Search..."
+      <input type="search" placeholder="Search..." aria-label="Search orders"
         class="w-full rounded-lg border-gray-300 pl-10 text-sm sm:w-64" />
     </div>
     <div class="flex gap-2">
-      <select class="rounded-lg border-gray-300 text-sm">
+      <select class="rounded-lg border-gray-300 text-sm" aria-label="Filter by status">
         <option>All statuses</option>
       </select>
       <button class="rounded-lg px-3 py-2 text-sm font-medium text-gray-700

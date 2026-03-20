@@ -18,19 +18,24 @@
 <!-- 次要按钮 -->
 <button class="inline-flex items-center rounded-lg bg-white px-4 py-2.5
   text-sm font-medium text-gray-700 shadow-sm ring-1 ring-inset ring-gray-300
-  hover:bg-gray-50 transition-colors">
+  hover:bg-gray-50 focus-visible:outline focus-visible:outline-2
+  focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-colors">
   次要操作
 </button>
 
 <!-- 幽灵按钮 -->
 <button class="inline-flex items-center rounded-lg px-4 py-2.5
-  text-sm font-medium text-blue-600 hover:bg-blue-50 transition-colors">
+  text-sm font-medium text-blue-600 hover:bg-blue-50
+  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
+  focus-visible:outline-blue-600 transition-colors">
   文字操作
 </button>
 
 <!-- 危险按钮 -->
 <button class="inline-flex items-center rounded-lg bg-red-600 px-4 py-2.5
-  text-sm font-medium text-white shadow-sm hover:bg-red-700 transition-colors">
+  text-sm font-medium text-white shadow-sm hover:bg-red-700
+  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
+  focus-visible:outline-red-600 transition-colors">
   删除
 </button>
 ```
@@ -53,7 +58,7 @@
 <!-- 错误状态 -->
 <div>
   <label for="email-error" class="block text-sm font-medium text-gray-700">邮箱地址</label>
-  <input type="email" id="email-error" aria-describedby="email-error-msg"
+  <input type="email" id="email-error" aria-describedby="email-error-msg" aria-invalid="true"
     class="mt-1 block w-full rounded-lg border-red-300 text-red-900
     placeholder-red-300 focus:border-red-500 focus:ring-red-500 sm:text-sm"
     value="invalid-email" />
@@ -190,5 +195,82 @@
       </tr>
     </tbody>
   </table>
+</div>
+```
+
+## 空状态
+
+```html
+<div class="flex flex-col items-center justify-center py-12 text-center">
+  <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+  </svg>
+  <h3 class="mt-2 text-sm font-semibold text-gray-900">暂无数据</h3>
+  <p class="mt-1 text-sm text-gray-500">开始创建你的第一个项目吧。</p>
+  <button class="mt-4 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700">
+    创建项目
+  </button>
+</div>
+```
+
+## 骨架屏
+
+```html
+<div class="animate-pulse space-y-4">
+  <div class="h-4 w-3/4 rounded bg-gray-200"></div>
+  <div class="h-4 w-1/2 rounded bg-gray-200"></div>
+  <div class="flex space-x-4">
+    <div class="h-10 w-10 rounded-full bg-gray-200"></div>
+    <div class="flex-1 space-y-2">
+      <div class="h-4 rounded bg-gray-200"></div>
+      <div class="h-4 w-5/6 rounded bg-gray-200"></div>
+    </div>
+  </div>
+</div>
+```
+
+## 提示消息
+
+```html
+<!-- 成功提示 -->
+<div role="alert" class="pointer-events-auto flex items-center gap-3 rounded-lg bg-white p-4 shadow-lg ring-1 ring-black/5">
+  <svg class="h-5 w-5 flex-shrink-0 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.06l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" />
+  </svg>
+  <p class="text-sm font-medium text-gray-900">保存成功</p>
+  <button class="ml-auto text-gray-400 hover:text-gray-500" aria-label="关闭">
+    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" /></svg>
+  </button>
+</div>
+```
+
+## 警告提示
+
+```html
+<div class="rounded-lg bg-yellow-50 p-4" role="alert">
+  <div class="flex">
+    <svg class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 6a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 6zm0 9a1 1 0 100-2 1 1 0 000 2z" />
+    </svg>
+    <div class="ml-3">
+      <p class="text-sm text-yellow-700">请注意：此操作不可撤销。</p>
+    </div>
+  </div>
+</div>
+```
+
+## 下拉菜单
+
+```html
+<div class="relative">
+  <button class="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50" aria-expanded="false" aria-haspopup="true">
+    操作
+    <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" /></svg>
+  </button>
+  <div class="absolute right-0 z-dropdown mt-1 w-48 rounded-lg bg-white py-1 shadow-lg ring-1 ring-black/5" role="menu">
+    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">编辑</a>
+    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">复制</a>
+    <a href="#" class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100" role="menuitem">删除</a>
+  </div>
 </div>
 ```

@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
+// Targets Tailwind CSS v3.x — not yet compatible with v4.
 // Production-ready Tailwind design system config
 // Copy this into your project's tailwind.config.js and customize brand colors
 
@@ -137,8 +138,10 @@ module.exports = {
   },
 
   plugins: [
+    // Required: all input/select/checkbox examples in this project depend on
+    // @tailwindcss/forms for consistent cross-browser form element styling.
+    require('@tailwindcss/forms'),
     // Uncomment as needed:
-    // require('@tailwindcss/forms'),
     // require('@tailwindcss/typography'),
     // require('@tailwindcss/aspect-ratio'),
     // require('@tailwindcss/container-queries'),

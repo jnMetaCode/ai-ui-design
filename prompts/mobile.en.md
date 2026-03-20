@@ -23,22 +23,22 @@ Create a mobile bottom tab bar:
   pb-[env(safe-area-inset-bottom)]">
   <div class="flex items-center justify-around px-2 py-2">
     <!-- Active tab -->
-    <a href="#" class="flex flex-col items-center gap-0.5 px-3 py-1">
+    <button class="flex flex-col items-center gap-0.5 px-3 py-1">
       <svg class="h-6 w-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
         <path d="M3 13h1v7c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-7h1a1 1 0 00.7-1.7l-9-9a1 1 0 00-1.4 0l-9 9A1 1 0 003 13z"/>
       </svg>
       <span class="text-xs font-medium text-blue-600">Home</span>
-    </a>
+    </button>
     <!-- Normal tab -->
-    <a href="#" class="flex flex-col items-center gap-0.5 px-3 py-1">
+    <button class="flex flex-col items-center gap-0.5 px-3 py-1">
       <svg class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
           d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
       </svg>
       <span class="text-xs text-gray-500">Discover</span>
-    </a>
+    </button>
     <!-- Tab with badge -->
-    <a href="#" class="relative flex flex-col items-center gap-0.5 px-3 py-1">
+    <button class="relative flex flex-col items-center gap-0.5 px-3 py-1">
       <div class="relative">
         <svg class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -48,15 +48,15 @@ Create a mobile bottom tab bar:
           rounded-full bg-red-500 text-[10px] font-bold text-white">3</span>
       </div>
       <span class="text-xs text-gray-500">Messages</span>
-    </a>
+    </button>
     <!-- Profile -->
-    <a href="#" class="flex flex-col items-center gap-0.5 px-3 py-1">
+    <button class="flex flex-col items-center gap-0.5 px-3 py-1">
       <svg class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
           d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
       </svg>
       <span class="text-xs text-gray-500">Profile</span>
-    </a>
+    </button>
   </div>
 </nav>
 ```
