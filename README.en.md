@@ -104,9 +104,6 @@ When using AI coding assistants (Claude, Cursor, Copilot, etc.) for frontend wor
 
 - [agency-agents-zh](https://github.com/jnMetaCode/agency-agents-zh) — 180 AI agent experts team
 - [superpowers-zh](https://github.com/jnMetaCode/superpowers-zh) — AI coding superpowers (Chinese edition)
-- [awesome-claude-md](https://github.com/jnMetaCode/awesome-claude-md) — Curated CLAUDE.md best practices
-- [ai-coding-101](https://github.com/jnMetaCode/ai-coding-101) — The complete guide to AI-assisted coding
-- [impeccable](https://github.com/pbakaus/impeccable) — Inspiration source, guide for flawless AI-generated UI
 
 ## Community
 
